@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <title></title>
+        <link href="hyiPlayer.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body style="margin: 0;padding: 0;">
+        <div style="max-width: 960px;margin:0 auto">
+            <div id="hyiplayer" class="hyiplayer">
+                <div class="hyiplayer-controls" id="controls">
+                    <div class="hyiplayer-controls-display">
+                        <div class="hyiplayer-controls-time-total">
+                            <div class="hyiplayer-controls-time-buffer"></div>
+                            <div class="hyiplayer-controls-time-current"></div>
+                        </div>
+
+                        <div class="hyiplayer-controls-button">
+                            <div class="hyiplayer-controls-button-button hyiplayer-controls-play">
+                                <svg style="width:36px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </svg>
+                            </div>
+
+                            <span class="hyiplayer-controls-button-time-display" disabled="">
+                                <span>00:00</span>/<span>00:00</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hyiplayer-video-warp">
+                    <div class="hyiplayer-display-info" id="display_cen">
+                        <h3 id="display_text">
+                            <span>1</span>
+                            <br>
+                            <span>2</span>
+                        </h3>
+                    </div>
+                    <div class="hyiplayer-debug-info">
+                        <div class="hyiplayer-debug-info-panel">
+                            <div class="hyiplayer-debug-info-panel-item">
+                                <span class="hyiplayer-debug-info-panel-item-title">
+                                    版本:
+                                </span>
+                                <span class="hyiplayer-debug-info-panel-item-data">
+                                    v0.0.1
+                                </span>
+                            </div>
+                            <div class="hyiplayer-debug-info-panel-item">
+                                <span class="hyiplayer-debug-info-panel-item-title">
+                                    视频分辨率:
+                                </span>
+                                <span class="hyiplayer-debug-info-panel-item-data">
+                                    0 x 0
+                                </span>
+                            </div>
+                            <div class="hyiplayer-debug-info-panel-item">
+                                <span class="hyiplayer-debug-info-panel-item-title">
+                                    视频解码速率:
+                                </span>
+                                <span class="hyiplayer-debug-info-panel-item-data">
+                                    0Kbps
+                                </span>
+                            </div>
+                            <div class="hyiplayer-debug-info-panel-item">
+                                <span class="hyiplayer-debug-info-panel-item-title">
+                                    音频解码速率:
+                                </span>
+                                <span class="hyiplayer-debug-info-panel-item-data">
+                                    0Kbps
+                                </span>
+                            </div>
+                            <div class="hyiplayer-debug-info-panel-item">
+                                <span class="hyiplayer-debug-info-panel-item-title">
+                                    实时播放帧数:
+                                </span>
+                                <span class="hyiplayer-debug-info-panel-item-data">
+                                    0
+                                </span>
+                            </div>
+                            <div class="hyiplayer-debug-info-panel-item">
+                                <span class="hyiplayer-debug-info-panel-item-title">
+                                    已解码/已丢弃:
+                                </span>
+                                <span class="hyiplayer-debug-info-panel-item-data">
+                                    0/0
+                                </span>
+                            </div>
+                            <div class="hyiplayer-debug-info-panel-item">
+                                <span class="hyiplayer-debug-info-panel-item-title">
+                                    缓冲存量:
+                                </span>
+                                <span class="hyiplayer-debug-info-panel-item-data">
+                                    0.00s
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <video class="hyiplayer-video" id="hyiplayer_video" src="http://127.0.0.1:90/mp41/1080p8000k.mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="hyiPlayer.js" type="text/javascript"></script>
+	<script>
+        var hyi = new huiPlayer({
+            container: document.getElementById("hyiplayer"),
+            videoNode: document.getElementById("hyiplayer_video")
+        })
+       
+        hyi.Init();
+        //hyi.Play();
+	</script>
+</html>

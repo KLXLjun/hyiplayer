@@ -1,0 +1,151 @@
+.hyiplayer *{
+	padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+.hyiplayer{
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+	position: relative;
+	line-height: 1;
+}
+
+.hyiplayer-display-info{
+	width: 100%;
+    height: 64px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    transition: all 0.35s ease-in-out 0s;
+	z-index: 100;
+	opacity: 0;
+}
+
+.hyiplayer-display-info h3{
+	line-height: 1.2;
+    color: white;
+    margin: 8px;
+}
+
+.hyiplayer-video{
+	height: 100%;
+	width: 100%;
+}
+
+.hyiplayer-controls{
+	height: 64px;
+    position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 5;
+	background-color: rgba(0,0,0,0.35);
+	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.55),rgba(0,0,0,0.75));
+}
+
+
+.hyiplayer-controls-display *{
+	transition: all .15s ease-in-out;
+}
+
+.hyiplayer-controls-display{
+	height: 44px;
+	padding: 20px 8px 0 8px;
+}
+
+.hyiplayer-controls-time-total{
+	position: relative;
+	width: 100%;
+	height: 4px;
+	background-color: rgba(255,255,255,0.2);
+	cursor: pointer;
+	margin-top: 0px;
+}
+
+.hyiplayer-controls-time-total:hover{
+	height: 6px;
+	transition: all .15s ease-in-out;
+}
+
+.hyiplayer-controls-time-current{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	height: 100%;
+	display: block;
+	background-color: #6699CC/* rgba(255,255,255,0.8) */
+}
+
+.hyiplayer-controls-time-buffer{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-color: #DCDCDC;/* rgba(14,184,58,0.8) #CCCCCC;*/
+	transition: all .8s ease-in-out;
+}
+
+.hyiplayer-controls-button *{
+	color: white;
+	cursor: pointer;
+}
+
+.hyiplayer-controls-button{
+	position: absolute;
+    bottom: 0;
+    height: 32px;
+	display: inline-block;
+}
+
+.hyiplayer-controls-button-button{
+	width:36px;
+	height:24px;
+	display: inline-block;
+    vertical-align: middle;
+}
+
+.hyiplayer-controls-button-time-display{
+	color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* debug */
+.hyiplayer-debug-info{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.hyiplayer-debug-info-panel{
+	font-size: 12px;
+	width: 330px;
+	background: rgba(28, 28, 28, .8);
+	padding: 10px 0;
+}
+
+.hyiplayer-debug-info-panel-item{
+	
+}
+
+.hyiplayer-debug-info-panel-item span{
+	display: inline-block;
+	color: white;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.hyiplayer-debug-info-panel-item-title{
+	width: 100px;
+	text-align: right;
+	margin-right: 8px;
+}
+
+.hyiplayer-debug-info-panel-item-data{
+	width: 200px;
+}
